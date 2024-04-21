@@ -5,3 +5,7 @@ llama-index-vector-stores-mongodb
 datasets
 pymongo
 pandas
+llama-index
+llama-index-readers-web
+llama-index-embeddings-fireworks
+jupyter

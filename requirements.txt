@@ -1,11 +1,11 @@
-
 llama-index
 llama-index-embeddings-openai
 llama-index-vector-stores-mongodb
 datasets
 pymongo
 pandas
-llama-index
 llama-index-readers-web
 llama-index-embeddings-fireworks
 jupyter
+streamlit
+python-dotenv

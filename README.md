@@ -32,13 +32,14 @@ LlamaWorksDB leverages the LlamaIndex, Fireworks, MongoDB documentation, git rep
       <img src="https://github.com/clab2024/clab/assets/2089311/55c4ac49-67bc-42ed-b486-3bf9710ace94" width="300">
     </td>
   <td>
-      - Chris<br>
-      - Leo<br>
-      - Andrew<br>
-      - Barath - [Twitter](https://twitter.com/baraths84)
+    <img src="https://github.com/clab2024/clab/assets/2089311/bc247980-600f-404f-8069-95d918742676" width="300">
     </td>
   </tr>
 </table>
+      - Chris<br>
+      - Leo<br>
+      - Andrew<br>
+      - Barath [Twitter](https://twitter.com/baraths84)
 
 ## 🎥 Presentation
 

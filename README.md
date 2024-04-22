@@ -26,7 +26,7 @@ LlamaWorksDB leverages the LlamaIndex, Fireworks, MongoDB documentation, git rep
 
 ## 👥 Team Members
 
-![Team Picture](https://github.com/clab2024/clab/assets/2089311/55c4ac49-67bc-42ed-b486-3bf9710ace94)
+<img src="https://github.com/clab2024/clab/assets/2089311/55c4ac49-67bc-42ed-b486-3bf9710ace94" width="300">
 
 - Chris
 - Leo

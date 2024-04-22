@@ -1,10 +1,10 @@
 # 🚀 LlamaWorksDB from Team CLAB
 
 ## 📅 Event Details
-**Event**: MongoDB GenAI Hackathon SF Project  
+**Event**: MongoDB GenAI Hackathon SF  
 **Date**: April 20, 2024
 
-The MongoDB GenAI Hackathon SF Project was a grand event with over 100+ participants forming 20+ teams. The teams competed fiercely, showcasing their innovative projects and technical prowess.
+The MongoDB GenAI Hackathon SanFranc was a grand event with over 100+ participants forming 20+ teams. The teams competed fiercely, showcasing their innovative projects and technical prowess.
 
 LlamaWorksDB is a Retrieval Augmented Generation (RAG) product designed to interact with the documentation of various products such as LlamaIndex, Fireworks, MongoDB, git repositories, and cookbooks. This project was developed by team CLAB (Chris, Leo, Andrew, Barath)
 

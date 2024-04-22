@@ -35,7 +35,7 @@ LlamaWorksDB leverages the LlamaIndex, Fireworks, MongoDB documentation, git rep
       - Chris<br>
       - Leo<br>
       - Andrew<br>
-      - Barath -  [Twitter](https://twitter.com/baraths84)
+      - Barath - [Twitter](https://twitter.com/baraths84)
     </td>
   </tr>
 </table>
@@ -48,8 +48,7 @@ You can view our project presentation [here](https://docs.google.com/presentatio
 
 Here is screenshot of the application:
 
-![ChatBot](https://github.com/clab2024/clab/assets/2089311/648f3e62-daa3-4f0b-af78-22c2e64ab525)
-
+<img src="https://github.com/clab2024/clab/assets/2089311/648f3e62-daa3-4f0b-af78-22c2e64ab525" width="600">
 
 ## 📂 Data Sources
 

@@ -6,11 +6,11 @@
 
 The MongoDB GenAI Hackathon SF Project was a grand event with over 100+ participants forming 20+ teams. The teams competed fiercely, showcasing their innovative projects and technical prowess.
 
-LlamaWorksDB is a Retrieval Augmented Generation (RAG) product designed to interact with the documentation of various products such as LlamaIndex, Fireworks, MongoDB, git repositories, and cookbooks. This project was developed by team CLAB (Chris, Leo, Andrew, Barath) and was awarded the **"Best use of LlamaIndex"**  at the MongoDB GenAI Hackathon SF. 🏆
+LlamaWorksDB is a Retrieval Augmented Generation (RAG) product designed to interact with the documentation of various products such as LlamaIndex, Fireworks, MongoDB, git repositories, and cookbooks. This project was developed by team CLAB (Chris, Leo, Andrew, Barath)
 
 ## 🏆 Award
 
-Our project, 🏆 **"LlamaWorksDB"** 🏆, was awarded the  🏆 **"Best use of LlamaIndex"**  🏆 during the MongoDB GenAI Hackathon SF. We are proud of our achievement and grateful for the recognition, with cash prize of 500 USD, we are excited to continue our journey in the world of AI and ML.
+Our project, **"LlamaWorksDB"** ,was awarded 🏆 the  **"Best use of LlamaIndex"**  during the MongoDB GenAI Hackathon SF. We are proud of our achievement and grateful for the recognition, with cash prize of 500 USD, we are excited to continue our journey in the world of AI and ML.
 
 ## Table of Contents
 - [Project Overview](#project-overview)

@@ -7,6 +7,11 @@ from llama_index.core import VectorStoreIndex, Settings
 from llama_index.embeddings.fireworks import FireworksEmbedding
 from llama_index.llms.fireworks import Fireworks
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
+from llama_index.core.retrievers import VectorIndexRetriever
+
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core.query_engine import RetrieverQueryEngine
 
 # Load environment variables
 load_dotenv()
@@ -36,6 +41,8 @@ Settings.llm = Fireworks(
     model="accounts/fireworks/models/mixtral-8x22b-instruct"
 )
 
+
+
 # Initialize session state
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
@@ -43,22 +50,56 @@ if "messages" not in st.session_state.keys():
     ]
 
 
-@st.cache(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def load_data():
     mongo_client = pymongo.MongoClient(env_vars['MONGO_URI'])
     vector_store = MongoDBAtlasVectorSearch(
         mongo_client,
-        db_name="sponsorDocuments",
-        collection_name="fireworkDocsTest",
-        index_name="fire_vector_index"
+        db_name="fireParse",
+        collection_name="llamaIndexDocs",
+        index_name="llama_docs_index"
     )
     return VectorStoreIndex.from_vector_store(vector_store=vector_store)
 
 
 index = load_data()
 
+# Configure the retriever
+retriever = VectorIndexRetriever(
+    index=index,
+    similarity_top_k=5,  # Retrieve top 5 most similar documents
+    doc_top_k=3,  # Return the top 3 most relevant documents
+)
+
+Settings.retriever = VectorIndexRetriever(
+    index=index,
+    similarity_top_k=5,  # Retrieve top 5 most similar documents
+    doc_top_k=3,  # Return the top 3 most relevant documents
+)
+
+query_engine = RetrieverQueryEngine(
+    retriever=retriever
+)
+
+# Create a ChatEngineConfig object
+# config = ChatEngineConfig(
+#     retriever=retriever,
+#     # Add other configuration options as needed
+# )
+
+
 if "chat_engine" not in st.session_state.keys():
-    st.session_state.chat_engine = index.as_chat_engine(chat_mode="react", verbose=True)
+    # st.session_state.chat_engine = index.as_chat_engine(chat_mode="best", verbose=True)
+    st.session_state.chat_engine = index.as_chat_engine(
+                                                    chat_mode="best",  
+                                                    context_prompt=(
+                                                        """ You are a software developer bot that is an expert at reading over documentation to answer questions.
+                                                            Use the relevant documents for context:
+                                                            {context_str}
+                                                            \nInstruction: Use the previous chat history, or the context above, to interact and help the user.
+                                                        """
+                                                    ),
+                                                    verbose=True)
 
 if prompt := st.chat_input("Your question"):  # Prompt for user input and save to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})

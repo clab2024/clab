@@ -1,0 +1,6 @@
+{
+    "sitemap_llamaindex_api_reference.xml": [
+      "https://docs.llamaindex.ai/en/stable/examples/node_parsers/semantic_chunking/",
+      "https://docs.llamaindex.ai/en/stable/examples/vector_stores/MongoDBAtlasVectorSearch/"
+    ]
+  }

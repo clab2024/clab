@@ -33,7 +33,7 @@ LlamaWorksDB leverages the LlamaIndex, Fireworks, MongoDB documentation, git rep
 3. Use `pip install -r requirments.txt` to install all necessary dependencies.
 4. Create a .env file in the root of the project containing your API keys for your github token, mongo uri, fireworks API key, and LlamaParse API key.
 5. Make sure you modify the vector store information in both scrape_documentation.py and main.py to match your MongoDB Atlas configuration
-6. To add documentation from navigate to the ingestion_pipeline directory and run `python3 scrape_documentation.py` to add all documentation in documentation_to_scrape.json
+6. To add documentation from a website run `python3 input_pipeline/scrape_documentation.py` to add all documentation in documentation_to_scrape.json
 7. To add Github examples navigate back to the root directory and run `uvicorn main:app --reload` then send a post request to localhost:8000/lamma-parse-and-mongo-load
 8. Finally to run the chatbot `python3 -m streamlit run streamlit_app.py`
 

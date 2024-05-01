@@ -37,10 +37,12 @@ def init_settings():
     #llm_configs = llm_config_from_env()
     #embedding_configs = embedding_config_from_env()
 
+    fireworks_api_key=os.getenv("FIREWORKS_API_KEY")
+
     #Settings.llm = OpenAI(**llm_configs)
-    Settings.llm = Fireworks(api_key="XXXX", model="accounts/fireworks/models/mixtral-8x22b-instruct")
+    Settings.llm = Fireworks(api_key=fireworks_api_key, model="accounts/fireworks/models/mixtral-8x22b-instruct")
     Settings.embed_model = FireworksEmbedding(
-        api_key="XXXX", dimensions=768)
+        api_key=fireworks_api_key, dimensions=768)
     #Settings.embed_model = OpenAIEmbedding(**embedding_configs)
     # Settings.chunk_size = int(os.getenv("CHUNK_SIZE", "1024"))
     # Settings.chunk_overlap = int(os.getenv("CHUNK_OVERLAP", "20"))
